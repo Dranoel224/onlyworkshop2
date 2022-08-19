@@ -1,5 +1,10 @@
 
-let countDownClock = document.getElementsById("container").onmouseover = function () {
+let countTime;
+function timeSetter(){
+    countTime = setInterval(countDownClock, 10000); 
+}
+
+let countDownClock = document.getElementsById("container").innerHTML = function () {
     //displayUI = document.getElementsById("container");
     for (let counter = 60; counter >= 0; counter -= 5) {
         if (counter % 2 == 0) {
@@ -12,6 +17,7 @@ let countDownClock = document.getElementsById("container").onmouseover = functio
         return counter;
         
     }
+    
     console.log(countDownClock());
     document.getElementsById("container").innerHTML += countDownClock;
 }
